@@ -37,7 +37,7 @@ SRC_URI = "git://github.com/soccentric-polaris/Polaris-Instrumentation.git;proto
 # this recipe was first written -- confirmed by an actual do_fetch
 # failure (exit code 128) the first time this SRC_URI was ever
 # actually fetched anywhere in the fleet.
-INSTR_SRCREV ?= "416029f"
+INSTR_SRCREV ?= "fd72762495c62b0cb399c586883eb04d2b584799"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('POLARIS_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
