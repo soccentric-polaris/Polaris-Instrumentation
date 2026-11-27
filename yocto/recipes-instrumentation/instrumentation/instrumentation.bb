@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/soccentric-polaris/Polaris-Instrumentation.git;proto
 # -- a release build must never silently float.
 # Held in its own variable: referencing SRCREV from inside SRCREV's own
 # expansion is self-referential and bitbake would recurse on it.
-INSTR_SRCREV ?= "fd72762495c62b0cb399c586883eb04d2b584799"
+INSTR_SRCREV ?= "7c6cdaebdccd113e8c2648b0406501bdca6df6ca"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('POLARIS_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
